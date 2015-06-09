@@ -8,6 +8,7 @@ module Dwolla
         @facilitator_amount = nil
         @test_mode = false
         @allow_funding_sources = true
+	@allow_guest_checkout = true
         @additional_funding_sources = true
         @order_id = nil
 
@@ -19,8 +20,9 @@ module Dwolla
             @notes = nil
             @facilitator_amount = nil
             @test_mode = false
-            @allow_funding_sources = true
-            @additional_funding_sources = true
+            @allowFundingSources = true
+            @allowGuestCheckout = true
+            @additionalFundingSources = true
             @order_id = nil
         end
 
@@ -32,8 +34,9 @@ module Dwolla
             attr_writer :redirect
             attr_writer :callback
             attr_writer :test_mode
-            attr_writer :allow_funding_sources
-            attr_writer :additional_funding_sources
+            attr_writer :allowFundingSources
+            attr_writer :allowGuestCheckout
+            attr_writer :additionalFundingSources
             attr_writer :facilitator_amount
         end
 
@@ -65,8 +68,9 @@ module Dwolla
             params = {
                 :key => Dwolla::api_key,
                 :secret => Dwolla::api_secret,
-                :allowFundingSources => @allow_funding_sources,
-                :additionalFundingSources => @additional_funding_sources,
+                :allowFundingSources => @allowFundingSources,
+                :allowGuestCheckout => @allowGuestCheckout,
+                :additionalFundingSources => @additionalFundingSources,
                 :test => @test_mode,
                 :callback => @callback,
                 :redirect => @redirect,
