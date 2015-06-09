@@ -7,9 +7,9 @@ module Dwolla
         @notes = nil
         @facilitator_amount = nil
         @test_mode = false
-        @allow_funding_sources = true
-	@allow_guest_checkout = true
-        @additional_funding_sources = true
+        @allowFundingSources = true
+	      @allowGuestCheckout = true
+        @additionalFundingSources = true
         @order_id = nil
 
         def self.clear_session
