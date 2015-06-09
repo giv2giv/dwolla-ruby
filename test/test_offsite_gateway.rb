@@ -31,6 +31,7 @@ class OffsiteGatewayTest < Test::Unit::TestCase
                                     :key => 'abc',
                                     :secret => 'def',
                                     :allowFundingSources => true,
+                                    :allowGuestCheckout => true,
                                     :additionalFundingSources => true,
                                     :test => false,
                                     :callback => nil,
